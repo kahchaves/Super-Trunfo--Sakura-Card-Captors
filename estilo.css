@@ -1,17 +1,20 @@
 body {
     font-family: 'Roboto Mono', monospace;
-    min-height: 854px;
+    /* min-height: 854px;  */
     background-image: url('https://i.pinimg.com/564x/ea/6f/cb/ea6fcb77692c525afd19dd4551c857b7.jpg');
     background-color: #000000;
-    background-size: contain;
-    background-position: center top;
+    height: 100%;
+    background-size: cover;
     background-repeat: no-repeat;
-    padding-bottom: 20vh;
 }
 
 .container {
+    width:100%;
     text-align: center;
-    padding: 20px;
+
+}
+.container>img{
+    width: 70%;
 }
 
 .page-title {
@@ -19,7 +22,8 @@ body {
     margin: 5px 0;
 }
 
-button, .button-jogar {
+button,
+.button-jogar {
     padding: .8rem 1.5rem;
     margin: 1rem 0;
     border-radius: 5px;
@@ -30,13 +34,39 @@ button, .button-jogar {
 h2 {
     color: white;
 }
+
 #moldura {
-    width: 250px;
-    height: 500px;
+    width: 125px;
+    height: 250px;
     border-radius: 33px;
 }
-#carta-jogador, #carta-maquina {
-    
+
+@media screen and (min-width: 768px) {
+    #moldura {
+        width: 250px;
+        height: 500px;
+        border-radius: 33px;
+    }
+    .container {
+        width: 90%;
+        text-align: center;
+        padding: 20px;
+    }
+    body {
+        font-family: 'Roboto Mono', monospace;
+        min-height: 854px;
+        background-image: url('https://i.pinimg.com/564x/ea/6f/cb/ea6fcb77692c525afd19dd4551c857b7.jpg');
+        background-color: #000000;
+        /* height: 100%; */
+        background-size: contain;
+        background-position: center top;
+        background-repeat: no-repeat;
+        padding-bottom: 20vh;
+    }
+}
+
+#carta-jogador,
+#carta-maquina {
     overflow: auto;
     border-radius: 10px;
     margin-bottom: 20px;
@@ -44,13 +74,11 @@ h2 {
     display: flex;
     flex-direction: column;
     align-items: center;
-    
     color: white;
 }
 
 #carta-jogador h3 {
     text-align: center;
-    
 }
 
 .carta-imagem {
@@ -102,7 +130,6 @@ form {
 
 .carta-subtitle {
     z-index: 2;
-   
     font-weight: 800;
     text-transform: uppercase;
 }
@@ -120,4 +147,3 @@ form {
 #resultado {
     color: white;
 }
-
